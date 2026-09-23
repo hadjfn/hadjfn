@@ -6,23 +6,31 @@ I’m looking for a **three-month internship abroad, starting in March 2027**. O
 
 [Portfolio & CV](https://el-hadj-sylla-cv.vercel.app/en/) · [LinkedIn](https://www.linkedin.com/in/elhadj-sylla) · [Contact](mailto:syllaelhadj2003@icloud.com)
 
-## Personal project versions
+## Making existing projects easier to change
 
-These repositories build on academic team projects. I maintain my own versions to work on architecture, regression tests and technical debt. The original history and contributors are retained in each repository.
+My dissertation focused on **technical debt**. I revisited these academic team projects to apply maintainability principles to existing code: separate responsibilities, protect behaviour with regression tests and document the decisions that still need work. The original contributors and history are preserved.
 
-| Project | Personal architecture work | Read the code and design |
+Real application screenshots from local runs with fictional sample data. Select a preview to read the case study on my CV website.
+
+| myFSS | BlazorGameQuest | HessBnb |
 | --- | --- | --- |
-| **[myFSS](https://github.com/hadjfn/devops-projet-efrei)** · Java / Spring Boot | JPA transaction boundaries, archive persistence, explicit HTTP failure handling and architecture tests | [Architecture](https://github.com/hadjfn/devops-projet-efrei/blob/main/docs/architecture.md) · [CI](https://github.com/hadjfn/devops-projet-efrei/actions) |
-| **[BlazorGameQuest](https://github.com/hadjfn/blazor-gamequest)** · C# / Blazor | Session use cases separated from persistence, ownership checks and tested game-state transitions | [Architecture](https://github.com/hadjfn/blazor-gamequest/blob/main/docs/architecture.md) · [CI](https://github.com/hadjfn/blazor-gamequest/actions) |
-| **[HessBnb](https://github.com/hadjfn/hessbnb)** · Spring Boot / Angular | Booking rules, PostgreSQL overlap constraints and a transactional outbox for RabbitMQ events | [Architecture](https://github.com/hadjfn/hessbnb/blob/main/docs/architecture.md) · [CI](https://github.com/hadjfn/hessbnb/actions) |
+| [![myFSS apprentice dashboard](assets/myfss-preview.jpg)](https://el-hadj-sylla-cv.vercel.app/en/#devops-project) | [![BlazorGameQuest game interface](assets/blazor-gamequest-preview.jpg)](https://el-hadj-sylla-cv.vercel.app/en/#blazor-project) | [![HessBnb accommodation interface](assets/hessbnb-preview.jpg)](https://el-hadj-sylla-cv.vercel.app/en/#hessbnb-project) |
 
-The READMEs explain how to run each project locally. Architecture notes record the decisions, their trade-offs and remaining work.
+| Project | What changed | Evidence |
+| --- | --- | --- |
+| **[myFSS](https://github.com/hadjfn/devops-projet-efrei)** · Java / Spring Boot | Archiving now commits to the database. Controllers use application services; a statistics outage is shown as unavailable instead of zero records. | [Changes](https://github.com/hadjfn/devops-projet-efrei/compare/8866fa6...d89fb66) · [Architecture](https://github.com/hadjfn/devops-projet-efrei/blob/main/docs/architecture.md) · [CI](https://github.com/hadjfn/devops-projet-efrei/actions) |
+| **[BlazorGameQuest](https://github.com/hadjfn/blazor-gamequest)** · C# / Blazor | Session use cases enforce ownership and lifecycle rules. A sequential victory retry cannot award the bonus again, and actions use the session’s own character. | [Changes](https://github.com/hadjfn/blazor-gamequest/compare/f655628...3a66cb3) · [Architecture](https://github.com/hadjfn/blazor-gamequest/blob/main/docs/architecture.md) · [CI](https://github.com/hadjfn/blazor-gamequest/actions) |
+| **[HessBnb](https://github.com/hadjfn/hessbnb)** · Spring Boot / Angular | Booking rules are separated from delivery code. PostgreSQL prevents overlapping active stays; an outbox records events in the booking transaction, with rental deduplication. | [Changes](https://github.com/hadjfn/hessbnb/compare/6530f1c...db19427) · [Architecture](https://github.com/hadjfn/hessbnb/blob/main/docs/architecture.md) · [CI](https://github.com/hadjfn/hessbnb/actions) |
+
+The verified suites run **59 tests for myFSS**, **243 for BlazorGameQuest**, and **33 Java + 4 Angular tests for HessBnb**. Each repository includes regression tests, architecture checks and a debt register.
+
+Remaining work is explicit: PostgreSQL integration tests for myFSS, durable storage and broader ownership checks for BlazorGameQuest, and server-side price validation plus real broker recovery tests for HessBnb.
+
+[Read the before/after engineering notes in French →](docs/maintenabilite.md)
 
 ## What I work on
 
-At **SFR / Altice France**, I work with Java / Spring Boot and Angular, alongside migrations from stored procedures to JPA, SQL optimisation and CI/CD tasks. I also audit applications for clean code and maintainability.
-
-My dissertation focused on **technical debt**. I’m interested in SOLID principles and test-driven development, especially where they help make business rules easier to understand and changes safer to review.
+At **SFR / Altice France**, I work with Java / Spring Boot and Angular, migrations from stored procedures to JPA, SQL optimisation and CI/CD tasks. I also audit applications for clean code and maintainability. I’m interested in SOLID principles and test-driven development where they help clarify business rules and make changes safer.
 
 ## Also built
 
