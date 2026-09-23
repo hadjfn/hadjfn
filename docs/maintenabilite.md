@@ -72,4 +72,4 @@ flowchart LR
 
 Les nombres correspondent à des suites de périmètres différents, pas à un classement entre projets. Les [CI myFSS](https://github.com/hadjfn/devops-projet-efrei/actions), [BlazorGameQuest](https://github.com/hadjfn/blazor-gamequest/actions) et [HessBnb](https://github.com/hadjfn/hessbnb/actions) permettent de vérifier les exécutions suivantes. Les liens de comparaison isolent les refontes personnelles ; les README des projets précisent les contributions initiales.
 
-Les aperçus du [profil](../README.md#application-previews) proviennent d’exécutions locales réelles avec des données fictives. Une capture montre une interface ; les tests et le code apportent les preuves sur les comportements décrits ici.
+Les aperçus du [profil](../README.md#making-existing-projects-easier-to-change) proviennent d’exécutions locales réelles avec des données fictives. Une capture montre une interface ; les tests et le code apportent les preuves sur les comportements décrits ici.
